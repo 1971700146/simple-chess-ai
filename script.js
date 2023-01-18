@@ -282,7 +282,11 @@ var greySquare = function(square) {
 
     squareEl.css('background', background);
 };
-
+var Restart = function() {
+	
+	game = new Chess();
+	board.start();
+};
 var cfg = {
     draggable: true,
     position: 'start',
@@ -293,3 +297,5 @@ var cfg = {
     onSnapEnd: onSnapEnd
 };
 board = ChessBoard('board', cfg);
+	
+$('#startBtn').on('click',Restart)
